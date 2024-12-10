@@ -1,0 +1,314 @@
+[gd_scene load_steps=50 format=3 uid="uid://bdib6jqxbbj"]
+
+[ext_resource type="Texture2D" uid="uid://cppfl1ft35dn" path="res://Imports/UI Images and Animations/Start Button.png" id="1_badrt"]
+[ext_resource type="PackedScene" uid="uid://bckitcaex1whq" path="res://Imports/From Blender/Body (copy)(1).glb" id="1_mp4uy"]
+[ext_resource type="Texture2D" uid="uid://chgq8m0x781h0" path="res://Imports/UI Images and Animations/Exit Button.png" id="1_nwvca"]
+[ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="1_udqr7"]
+[ext_resource type="Texture2D" uid="uid://b0s2rs8yvk5cs" path="res://Imports/UI Images and Animations/Options Button.png" id="2_18w6q"]
+[ext_resource type="Script" path="res://Scripts/Title Man.gd" id="2_pwbtp"]
+[ext_resource type="Texture2D" uid="uid://d4naki16pq6c5" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 0.png" id="3_dvhj1"]
+[ext_resource type="Texture2D" uid="uid://bt4hsw1pm65qv" path="res://Imports/UI Images and Animations/Credits Button.png" id="3_xbvq0"]
+[ext_resource type="Texture2D" uid="uid://u41plhispji8" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 1.png" id="4_7lh5r"]
+[ext_resource type="Texture2D" uid="uid://8cbjghqbkc8l" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 6.png" id="5_7fl8c"]
+[ext_resource type="Texture2D" uid="uid://dxw2gq1c2a8iw" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 5.png" id="6_rfrej"]
+[ext_resource type="Texture2D" uid="uid://c1ppq52wei2gd" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 4.png" id="7_cted4"]
+[ext_resource type="Texture2D" uid="uid://dgwawm3fvwg6y" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 3.png" id="8_u4fpd"]
+[ext_resource type="Texture2D" uid="uid://c57ij7nhyo6hm" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 2.png" id="9_hre8m"]
+[ext_resource type="Texture2D" uid="uid://b2ev8hlgna2cj" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 7.png" id="10_x5lga"]
+[ext_resource type="Texture2D" uid="uid://carorrdb75vek" path="res://Imports/UI Images and Animations/Start Button anim/Start Button anim 8.png" id="11_5sux0"]
+[ext_resource type="Texture2D" uid="uid://bon3p0u6exbqe" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 0.png" id="13_57acw"]
+[ext_resource type="Texture2D" uid="uid://4cfvd0hwjgav" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 1.png" id="14_331wg"]
+[ext_resource type="Texture2D" uid="uid://bs4v226pl3yt6" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 6.png" id="15_qn6qi"]
+[ext_resource type="Texture2D" uid="uid://decymv17j03rk" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 5.png" id="16_ltvrd"]
+[ext_resource type="Texture2D" uid="uid://dfkkbtokqudo7" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 4.png" id="17_eo4kc"]
+[ext_resource type="Texture2D" uid="uid://41vqed42gf8h" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 3.png" id="18_qagnd"]
+[ext_resource type="Texture2D" uid="uid://di16et6xjjkdn" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 2.png" id="19_65k77"]
+[ext_resource type="Texture2D" uid="uid://gfuepgfr7t0l" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 7.png" id="20_12w4g"]
+[ext_resource type="Texture2D" uid="uid://qyti34coce2k" path="res://Imports/UI Images and Animations/Options Button anim/Options Button anim 8.png" id="21_k78ku"]
+[ext_resource type="Texture2D" uid="uid://dxpjt6rqecpx8" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 0.png" id="23_vcbnc"]
+[ext_resource type="Texture2D" uid="uid://bio2qobo66ifo" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 1.png" id="24_cejit"]
+[ext_resource type="Texture2D" uid="uid://dvjpndao4abrn" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 0.png" id="24_w3kjv"]
+[ext_resource type="Texture2D" uid="uid://w1b6ni1a22hk" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 6.png" id="25_6j2lt"]
+[ext_resource type="Texture2D" uid="uid://binx3w5alb11i" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 1.png" id="25_kdqq5"]
+[ext_resource type="Texture2D" uid="uid://bmq1bhldp4w15" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 5.png" id="26_gcpk8"]
+[ext_resource type="Texture2D" uid="uid://byma1xo52wpbr" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 6.png" id="26_xp4x6"]
+[ext_resource type="Texture2D" uid="uid://d1xh3tc26vuo5" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 4.png" id="27_htg45"]
+[ext_resource type="Texture2D" uid="uid://dp0cxrvsyjy0v" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 5.png" id="27_u0b1f"]
+[ext_resource type="Texture2D" uid="uid://dhywvi5nv6ii7" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 3.png" id="28_7w44k"]
+[ext_resource type="Texture2D" uid="uid://7x3oeumnp40g" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 4.png" id="28_krhb5"]
+[ext_resource type="Texture2D" uid="uid://b5uuovp08y2p7" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 2.png" id="29_fu8hk"]
+[ext_resource type="Texture2D" uid="uid://dip7q5jhplgif" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 3.png" id="29_nud6o"]
+[ext_resource type="Texture2D" uid="uid://dst1rcrvxmnqj" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 7.png" id="30_254jb"]
+[ext_resource type="Texture2D" uid="uid://c6mxfhebmas1g" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 2.png" id="30_x6ngh"]
+[ext_resource type="Texture2D" uid="uid://gs8gtggvc7hr" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 7.png" id="31_dkpqy"]
+[ext_resource type="Texture2D" uid="uid://ud0tiih0apsb" path="res://Imports/UI Images and Animations/Credits Button anim/Credits Button anim 8.png" id="31_s5484"]
+[ext_resource type="Texture2D" uid="uid://bilexfdoqvnl4" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 8.png" id="32_ndmp3"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_es0p2"]
+frames = 16
+frame_0/texture = ExtResource("3_dvhj1")
+frame_0/duration = 0.09
+frame_1/texture = ExtResource("4_7lh5r")
+frame_1/duration = 0.06
+frame_2/texture = ExtResource("9_hre8m")
+frame_2/duration = 0.03
+frame_3/texture = ExtResource("8_u4fpd")
+frame_3/duration = 0.03
+frame_4/texture = ExtResource("7_cted4")
+frame_4/duration = 0.03
+frame_5/texture = ExtResource("6_rfrej")
+frame_5/duration = 0.03
+frame_6/texture = ExtResource("5_7fl8c")
+frame_6/duration = 0.03
+frame_7/texture = ExtResource("10_x5lga")
+frame_7/duration = 0.06
+frame_8/texture = ExtResource("11_5sux0")
+frame_8/duration = 0.09
+frame_9/texture = ExtResource("10_x5lga")
+frame_9/duration = 0.06
+frame_10/texture = ExtResource("5_7fl8c")
+frame_10/duration = 0.03
+frame_11/texture = ExtResource("6_rfrej")
+frame_11/duration = 0.03
+frame_12/texture = ExtResource("7_cted4")
+frame_12/duration = 0.03
+frame_13/texture = ExtResource("8_u4fpd")
+frame_13/duration = 0.03
+frame_14/texture = ExtResource("9_hre8m")
+frame_14/duration = 0.03
+frame_15/texture = ExtResource("4_7lh5r")
+frame_15/duration = 0.06
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_utdwu"]
+frames = 16
+frame_0/texture = ExtResource("13_57acw")
+frame_0/duration = 0.09
+frame_1/texture = ExtResource("14_331wg")
+frame_1/duration = 0.06
+frame_2/texture = ExtResource("19_65k77")
+frame_2/duration = 0.03
+frame_3/texture = ExtResource("18_qagnd")
+frame_3/duration = 0.03
+frame_4/texture = ExtResource("17_eo4kc")
+frame_4/duration = 0.03
+frame_5/texture = ExtResource("16_ltvrd")
+frame_5/duration = 0.03
+frame_6/texture = ExtResource("15_qn6qi")
+frame_6/duration = 0.03
+frame_7/texture = ExtResource("20_12w4g")
+frame_7/duration = 0.06
+frame_8/texture = ExtResource("21_k78ku")
+frame_8/duration = 0.09
+frame_9/texture = ExtResource("20_12w4g")
+frame_9/duration = 0.06
+frame_10/texture = ExtResource("15_qn6qi")
+frame_10/duration = 0.03
+frame_11/texture = ExtResource("16_ltvrd")
+frame_11/duration = 0.03
+frame_12/texture = ExtResource("17_eo4kc")
+frame_12/duration = 0.03
+frame_13/texture = ExtResource("18_qagnd")
+frame_13/duration = 0.03
+frame_14/texture = ExtResource("19_65k77")
+frame_14/duration = 0.03
+frame_15/texture = ExtResource("14_331wg")
+frame_15/duration = 0.06
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7t4wg"]
+frames = 16
+frame_0/texture = ExtResource("23_vcbnc")
+frame_0/duration = 0.09
+frame_1/texture = ExtResource("24_cejit")
+frame_1/duration = 0.06
+frame_2/texture = ExtResource("29_fu8hk")
+frame_2/duration = 0.03
+frame_3/texture = ExtResource("28_7w44k")
+frame_3/duration = 0.03
+frame_4/texture = ExtResource("27_htg45")
+frame_4/duration = 0.03
+frame_5/texture = ExtResource("26_gcpk8")
+frame_5/duration = 0.03
+frame_6/texture = ExtResource("25_6j2lt")
+frame_6/duration = 0.03
+frame_7/texture = ExtResource("30_254jb")
+frame_7/duration = 0.06
+frame_8/texture = ExtResource("31_s5484")
+frame_8/duration = 0.09
+frame_9/texture = ExtResource("30_254jb")
+frame_9/duration = 0.06
+frame_10/texture = ExtResource("25_6j2lt")
+frame_10/duration = 0.03
+frame_11/texture = ExtResource("26_gcpk8")
+frame_11/duration = 0.03
+frame_12/texture = ExtResource("27_htg45")
+frame_12/duration = 0.03
+frame_13/texture = ExtResource("28_7w44k")
+frame_13/duration = 0.03
+frame_14/texture = ExtResource("29_fu8hk")
+frame_14/duration = 0.03
+frame_15/texture = ExtResource("24_cejit")
+frame_15/duration = 0.06
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_nd2a0"]
+frames = 16
+frame_0/texture = ExtResource("24_w3kjv")
+frame_0/duration = 0.09
+frame_1/texture = ExtResource("25_kdqq5")
+frame_1/duration = 0.06
+frame_2/texture = ExtResource("30_x6ngh")
+frame_2/duration = 0.03
+frame_3/texture = ExtResource("29_nud6o")
+frame_3/duration = 0.03
+frame_4/texture = ExtResource("28_krhb5")
+frame_4/duration = 0.03
+frame_5/texture = ExtResource("27_u0b1f")
+frame_5/duration = 0.03
+frame_6/texture = ExtResource("26_xp4x6")
+frame_6/duration = 0.03
+frame_7/texture = ExtResource("31_dkpqy")
+frame_7/duration = 0.06
+frame_8/texture = ExtResource("32_ndmp3")
+frame_8/duration = 0.09
+frame_9/texture = ExtResource("31_dkpqy")
+frame_9/duration = 0.06
+frame_10/texture = ExtResource("26_xp4x6")
+frame_10/duration = 0.03
+frame_11/texture = ExtResource("27_u0b1f")
+frame_11/duration = 0.03
+frame_12/texture = ExtResource("28_krhb5")
+frame_12/duration = 0.03
+frame_13/texture = ExtResource("29_nud6o")
+frame_13/duration = 0.03
+frame_14/texture = ExtResource("30_x6ngh")
+frame_14/duration = 0.03
+frame_15/texture = ExtResource("25_kdqq5")
+frame_15/duration = 0.06
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25uar"]
+albedo_color = Color(0.947935, 0.615843, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vga8f"]
+material = SubResource("StandardMaterial3D_25uar")
+
+[node name="World" type="Node"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_udqr7")
+
+[node name="Start" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = 219.0
+offset_right = -873.0
+offset_bottom = -339.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="TextureButton" parent="UI/Start"]
+layout_mode = 2
+texture_normal = ExtResource("1_badrt")
+texture_hover = SubResource("AnimatedTexture_es0p2")
+
+[node name="Options" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = 320.0
+offset_right = -873.0
+offset_bottom = -238.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsButton" type="TextureButton" parent="UI/Options"]
+layout_mode = 2
+texture_normal = ExtResource("2_18w6q")
+texture_hover = SubResource("AnimatedTexture_utdwu")
+
+[node name="Credits" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = 420.0
+offset_right = -873.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsButton" type="TextureButton" parent="UI/Credits"]
+layout_mode = 2
+texture_normal = ExtResource("3_xbvq0")
+texture_hover = SubResource("AnimatedTexture_7t4wg")
+
+[node name="Exit" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = 526.0
+offset_right = -873.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ExitButton" type="TextureButton" parent="UI/Exit"]
+layout_mode = 2
+texture_normal = ExtResource("1_nwvca")
+texture_hover = SubResource("AnimatedTexture_nd2a0")
+
+[node name="TitleBox" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -655.0
+offset_top = 38.0
+offset_right = -70.0
+offset_bottom = 165.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="UI/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Slimeageddon"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Title model things" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Title model things"]
+transform = Transform3D(1, 0, 0, 0, 0.98023, 0.197863, 0, -0.197863, 0.98023, -0.372883, 1.08579, 0.802632)
+
+[node name="Body (copy)(1)" parent="Title model things" instance=ExtResource("1_mp4uy")]
+transform = Transform3D(0.901191, 0, -0.433423, 0, 1, 0, 0.433423, 0, 0.901191, 0, 0, 0)
+script = ExtResource("2_pwbtp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Title model things"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, -10, 0, 10, -4.37114e-07, 0, 0, -3)
+mesh = SubResource("PlaneMesh_vga8f")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Title model things"]
+transform = Transform3D(0.850738, 0.398934, -0.342194, 0.391858, -0.0475303, 0.918797, 0.350275, -0.915747, -0.196761, 0, 3.02339, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Title model things"]
+spot_range = 49.0
+spot_angle = 89.99
+
+[connection signal="pressed" from="UI/Start/StartButton" to="UI" method="_on_start_button_pressed"]
+[connection signal="pressed" from="UI/Options/OptionsButton" to="UI" method="_on_options_button_pressed"]
+[connection signal="pressed" from="UI/Credits/CreditsButton" to="UI" method="_on_credits_button_pressed"]
+[connection signal="pressed" from="UI/Exit/ExitButton" to="UI" method="_on_exit_button_pressed"]

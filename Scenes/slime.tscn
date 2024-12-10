@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://vxvwgnugvdhb"]
+
+[ext_resource type="Script" path="res://Scripts/slime.gd" id="1_ly7e6"]
+[ext_resource type="PackedScene" uid="uid://bqdhkm5fh5ib8" path="res://Scenes/slime (actual).tscn" id="2_ot3x7"]
+[ext_resource type="PackedScene" uid="uid://sxxryv8jn16b" path="res://Imports/From Blender/Slime sad new.fbx" id="3_lagrq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mn2e"]
+albedo_color = Color(0.447059, 1, 0.364706, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ipdd3"]
+material = SubResource("StandardMaterial3D_8mn2e")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1y4q7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sv77t"]
+radius = 1.0
+
+[node name="Slime" type="CharacterBody3D" node_paths=PackedStringArray("mesh", "mesh2") groups=["Slime"]]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+script = ExtResource("1_ly7e6")
+mesh = NodePath("SlimeMesh Sad")
+mesh2 = NodePath("SlimeMesh Happr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_ipdd3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_1y4q7")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_sv77t")
+
+[node name="SlimeMesh Sad" parent="." instance=ExtResource("2_ot3x7")]
+transform = Transform3D(-0.715, 0, -6.25073e-08, 0, 0.715, 0, 6.25073e-08, 0, -0.715, 0, -0.402356, 0)
+visible = false
+
+[node name="SlimeMesh Happr" parent="." instance=ExtResource("3_lagrq")]
+transform = Transform3D(-0.71, 0, -6.20702e-08, 0, 0.71, 0, 6.20702e-08, 0, -0.71, 0, -0.4, 0)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

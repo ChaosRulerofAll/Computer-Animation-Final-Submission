@@ -1,0 +1,152 @@
+[gd_scene load_steps=17 format=3 uid="uid://cd2bhv6nfn4l6"]
+
+[ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="1_dkbcp"]
+[ext_resource type="Texture2D" uid="uid://chgq8m0x781h0" path="res://Imports/UI Images and Animations/Exit Button.png" id="2_ph2h6"]
+[ext_resource type="Texture2D" uid="uid://dvjpndao4abrn" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 0.png" id="3_ecelp"]
+[ext_resource type="Texture2D" uid="uid://binx3w5alb11i" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 1.png" id="4_ctrjd"]
+[ext_resource type="Texture2D" uid="uid://byma1xo52wpbr" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 6.png" id="5_n5dy3"]
+[ext_resource type="Texture2D" uid="uid://dp0cxrvsyjy0v" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 5.png" id="6_vpqqu"]
+[ext_resource type="Texture2D" uid="uid://7x3oeumnp40g" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 4.png" id="7_fhuxl"]
+[ext_resource type="Texture2D" uid="uid://dip7q5jhplgif" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 3.png" id="8_q7kk8"]
+[ext_resource type="Texture2D" uid="uid://c6mxfhebmas1g" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 2.png" id="9_ujej6"]
+[ext_resource type="Texture2D" uid="uid://gs8gtggvc7hr" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 7.png" id="10_muuqo"]
+[ext_resource type="Texture2D" uid="uid://bilexfdoqvnl4" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 8.png" id="11_c1tg4"]
+[ext_resource type="PackedScene" uid="uid://bckitcaex1whq" path="res://Imports/From Blender/Body (copy)(1).glb" id="12_xevin"]
+[ext_resource type="Script" path="res://Scripts/Title Man.gd" id="13_rx1so"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_r0mpl"]
+frames = 16
+frame_0/texture = ExtResource("3_ecelp")
+frame_0/duration = 0.09
+frame_1/texture = ExtResource("4_ctrjd")
+frame_1/duration = 0.06
+frame_2/texture = ExtResource("9_ujej6")
+frame_2/duration = 0.03
+frame_3/texture = ExtResource("8_q7kk8")
+frame_3/duration = 0.03
+frame_4/texture = ExtResource("7_fhuxl")
+frame_4/duration = 0.03
+frame_5/texture = ExtResource("6_vpqqu")
+frame_5/duration = 0.03
+frame_6/texture = ExtResource("5_n5dy3")
+frame_6/duration = 0.03
+frame_7/texture = ExtResource("10_muuqo")
+frame_7/duration = 0.06
+frame_8/texture = ExtResource("11_c1tg4")
+frame_8/duration = 0.09
+frame_9/texture = ExtResource("10_muuqo")
+frame_9/duration = 0.06
+frame_10/texture = ExtResource("5_n5dy3")
+frame_10/duration = 0.03
+frame_11/texture = ExtResource("6_vpqqu")
+frame_11/duration = 0.03
+frame_12/texture = ExtResource("7_fhuxl")
+frame_12/duration = 0.03
+frame_13/texture = ExtResource("8_q7kk8")
+frame_13/duration = 0.03
+frame_14/texture = ExtResource("9_ujej6")
+frame_14/duration = 0.03
+frame_15/texture = ExtResource("4_ctrjd")
+frame_15/duration = 0.06
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kgbe"]
+albedo_color = Color(0.947935, 0.615843, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qlopn"]
+material = SubResource("StandardMaterial3D_4kgbe")
+
+[node name="Options Menu" type="Node"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dkbcp")
+
+[node name="Exit" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -119.0
+offset_right = 120.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ExitButton" type="TextureButton" parent="UI/Exit"]
+layout_mode = 2
+texture_normal = ExtResource("2_ph2h6")
+texture_hover = SubResource("AnimatedTexture_r0mpl")
+
+[node name="TitleBox" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -354.0
+offset_top = 31.0
+offset_right = 354.0
+offset_bottom = 158.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="UI/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Slimeageddon"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Control Text" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -354.0
+offset_top = 153.0
+offset_right = 354.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/Control Text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Attack: Left-Click
+Jump: Space
+Release Mouse: ESC
+Exit Game: Esc-Esc"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Title model things" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Title model things"]
+transform = Transform3D(1, 0, 0, 0, 0.98023, 0.197863, 0, -0.197863, 0.98023, -0.372883, 1.08579, 0.802632)
+
+[node name="Body (copy)(1)" parent="Title model things" instance=ExtResource("12_xevin")]
+transform = Transform3D(0.901191, 0, -0.433423, 0, 1, 0, 0.433423, 0, 0.901191, 0, 0, 0)
+visible = false
+script = ExtResource("13_rx1so")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Title model things"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, -10, 0, 10, -4.37114e-07, 0, 0, -3)
+mesh = SubResource("PlaneMesh_qlopn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Title model things"]
+transform = Transform3D(0.850738, 0.398934, -0.342194, 0.391858, -0.0475303, 0.918797, 0.350275, -0.915747, -0.196761, 0, 3.02339, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Title model things"]
+spot_range = 49.0
+spot_angle = 89.99
+
+[connection signal="pressed" from="UI/Exit/ExitButton" to="UI" method="_on_exit_button_pressed"]

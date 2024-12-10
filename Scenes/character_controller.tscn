@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxbh3wwqe8tke"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_502if"]
+[ext_resource type="Script" path="res://Scripts/aim_look.gd" id="2_okv8w"]
+[ext_resource type="PackedScene" uid="uid://cyrf0l3upr4ah" path="res://Imports/From Blender/Stick New.glb" id="2_ooqg0"]
+[ext_resource type="Script" path="res://Scripts/stick.gd" id="4_vydpl"]
+[ext_resource type="Script" path="res://Scripts/Stick_collider_anim_code.gd" id="5_hv27x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rtgjo"]
+radius = 0.25
+height = 1.25
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s81lv"]
+radius = 0.25
+height = 1.25
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o8hl2"]
+top_radius = 0.0
+bottom_radius = 0.05
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0g0ll"]
+size = Vector3(0.214935, 1.168, 2.0552)
+
+[node name="CharacterController" type="CharacterBody3D" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_502if")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.165, 0)
+shape = SubResource("CapsuleShape3D_rtgjo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.165, 0)
+mesh = SubResource("CapsuleMesh_s81lv")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="CameraContainer" type="Node3D" parent="Head"]
+
+[node name="Camera3D" type="Camera3D" parent="Head/CameraContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0292319, 0)
+
+[node name="Stick New" parent="Head/CameraContainer" instance=ExtResource("2_ooqg0")]
+transform = Transform3D(0.213076, 0.103787, -0.0377754, 0, 0.0820848, 0.225526, 0.110448, -0.200226, 0.0728762, 0.066, -0.151, 0)
+script = ExtResource("4_vydpl")
+
+[node name="AimLook" type="Node3D" parent="." node_paths=PackedStringArray("character", "head")]
+script = ExtResource("2_okv8w")
+character = NodePath("..")
+head = NodePath("../Head")
+mouse_sensitivity = 100
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.196596, 0.137658, 6.01724e-09, 0, -1.04907e-08, 0.24, 0.137658, -0.196596, -8.5935e-09, 0, 0, 0)
+script = ExtResource("5_hv27x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -1.77636e-15, -3.55271e-15, 8.88178e-15, 1, 0.0804318, 1.44785, -0.651308)
+visible = false
+mesh = SubResource("CylinderMesh_o8hl2")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+transform = Transform3D(1.00002, -2.98023e-08, 0, 5.96046e-08, 1, 0, 0, 3.55271e-15, 1, 4.01557e-15, 1.188, -0.695)
+shape = SubResource("BoxShape3D_0g0ll")
+
+[connection signal="area_entered" from="StaticBody3D/Area3D" to="StaticBody3D" method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="StaticBody3D/Area3D" to="StaticBody3D" method="_on_area_3d_area_exited"]

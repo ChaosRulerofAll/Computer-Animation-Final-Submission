@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwu4uc1mhcbt2"]
+
+[ext_resource type="Script" path="res://Scripts/Reflect.gd" id="1_telpl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aa5d8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fnv8p"]
+material = SubResource("StandardMaterial3D_aa5d8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wbx0"]
+
+[node name="Wall Tile" type="StaticBody3D" groups=["Bounce-able Surfaces"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
+script = ExtResource("1_telpl")
+colour = Color(0, 0.796078, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_fnv8p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0wbx0")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_0wbx0")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

@@ -1,0 +1,190 @@
+[gd_scene load_steps=17 format=3 uid="uid://bpekvitk374fu"]
+
+[ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="1_enl8e"]
+[ext_resource type="Texture2D" uid="uid://chgq8m0x781h0" path="res://Imports/UI Images and Animations/Exit Button.png" id="2_voqqm"]
+[ext_resource type="Texture2D" uid="uid://dvjpndao4abrn" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 0.png" id="3_5a24r"]
+[ext_resource type="Texture2D" uid="uid://binx3w5alb11i" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 1.png" id="4_4sryb"]
+[ext_resource type="Texture2D" uid="uid://byma1xo52wpbr" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 6.png" id="5_ts0uk"]
+[ext_resource type="Texture2D" uid="uid://dp0cxrvsyjy0v" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 5.png" id="6_j4kte"]
+[ext_resource type="Texture2D" uid="uid://7x3oeumnp40g" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 4.png" id="7_r3lwk"]
+[ext_resource type="Texture2D" uid="uid://dip7q5jhplgif" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 3.png" id="8_l3ewx"]
+[ext_resource type="Texture2D" uid="uid://c6mxfhebmas1g" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 2.png" id="9_rbwsd"]
+[ext_resource type="Texture2D" uid="uid://gs8gtggvc7hr" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 7.png" id="10_xa1w0"]
+[ext_resource type="Texture2D" uid="uid://bilexfdoqvnl4" path="res://Imports/UI Images and Animations/Exit Button anim/Exit Button anim 8.png" id="11_mql86"]
+[ext_resource type="PackedScene" uid="uid://bckitcaex1whq" path="res://Imports/From Blender/Body (copy)(1).glb" id="12_3nvex"]
+[ext_resource type="Script" path="res://Scripts/Title Man.gd" id="13_xe2ca"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_s80t1"]
+frames = 16
+frame_0/texture = ExtResource("3_5a24r")
+frame_0/duration = 0.09
+frame_1/texture = ExtResource("4_4sryb")
+frame_1/duration = 0.06
+frame_2/texture = ExtResource("9_rbwsd")
+frame_2/duration = 0.03
+frame_3/texture = ExtResource("8_l3ewx")
+frame_3/duration = 0.03
+frame_4/texture = ExtResource("7_r3lwk")
+frame_4/duration = 0.03
+frame_5/texture = ExtResource("6_j4kte")
+frame_5/duration = 0.03
+frame_6/texture = ExtResource("5_ts0uk")
+frame_6/duration = 0.03
+frame_7/texture = ExtResource("10_xa1w0")
+frame_7/duration = 0.06
+frame_8/texture = ExtResource("11_mql86")
+frame_8/duration = 0.09
+frame_9/texture = ExtResource("10_xa1w0")
+frame_9/duration = 0.06
+frame_10/texture = ExtResource("5_ts0uk")
+frame_10/duration = 0.03
+frame_11/texture = ExtResource("6_j4kte")
+frame_11/duration = 0.03
+frame_12/texture = ExtResource("7_r3lwk")
+frame_12/duration = 0.03
+frame_13/texture = ExtResource("8_l3ewx")
+frame_13/duration = 0.03
+frame_14/texture = ExtResource("9_rbwsd")
+frame_14/duration = 0.03
+frame_15/texture = ExtResource("4_4sryb")
+frame_15/duration = 0.06
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00gae"]
+albedo_color = Color(0.947935, 0.615843, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1wsxk"]
+material = SubResource("StandardMaterial3D_00gae")
+
+[node name="Credit Menu" type="Node"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_enl8e")
+
+[node name="Exit" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -119.0
+offset_right = 120.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ExitButton" type="TextureButton" parent="UI/Exit"]
+layout_mode = 2
+texture_normal = ExtResource("2_voqqm")
+texture_hover = SubResource("AnimatedTexture_s80t1")
+
+[node name="TitleBox" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -354.0
+offset_top = 31.0
+offset_right = 354.0
+offset_bottom = 158.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="UI/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Slimeageddon"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Control Text" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = 160.0
+offset_right = 348.0
+offset_bottom = -153.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Control Text"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][color=black][font size=30]Ilya Soukoreff: Programmer
+
+Owen Lewis-Hanslip: Modeling and Animations
+
+Sergio Mouro: Modeling And Animations
+
+Slime 1: Practice Dummy
+
+Slime 2: Practice Dummy
+
+Slime 3: Practice Dummy
+
+Slime 4: Practice Dummy
+
+Slime 5: Practice Dummy
+
+Slime 6: Practice Dummy
+
+Slime 7: Practice Dummy
+
+Slime 8: Practice Dummy
+
+Slime 9: Practice Dummy
+
+Slime 10: Practice Dummy
+
+Slime 11: Practice Dummy
+
+Slime 12: Practice Dummy
+
+Slime 13: Practice Dummy
+
+Slime 14: Practice Dummy
+
+Slime 15: Practice Dummy
+
+Slime 16: Practice Dummy
+
+Slime 17: Practice Dummy
+
+Slime 18: Practice Dummy
+
+Slime 19: Practice Dummy
+
+Slime 20: Practice Dummy"
+
+[node name="Title model things" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Title model things"]
+transform = Transform3D(1, 0, 0, 0, 0.98023, 0.197863, 0, -0.197863, 0.98023, -0.372883, 1.08579, 0.802632)
+
+[node name="Body (copy)(1)" parent="Title model things" instance=ExtResource("12_3nvex")]
+transform = Transform3D(0.901191, 0, -0.433423, 0, 1, 0, 0.433423, 0, 0.901191, 0, 0, 0)
+visible = false
+script = ExtResource("13_xe2ca")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Title model things"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, -10, 0, 10, -4.37114e-07, 0, 0, -3)
+mesh = SubResource("PlaneMesh_1wsxk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Title model things"]
+transform = Transform3D(0.850738, 0.398934, -0.342194, 0.391858, -0.0475303, 0.918797, 0.350275, -0.915747, -0.196761, 0, 3.02339, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Title model things"]
+spot_range = 49.0
+spot_angle = 89.99
+
+[connection signal="pressed" from="UI/Exit/ExitButton" to="UI" method="_on_exit_button_pressed"]
